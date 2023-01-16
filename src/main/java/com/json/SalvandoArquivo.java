@@ -7,7 +7,10 @@ import org.json.JSONObject;
 
 public class SalvandoArquivo {
 	public static void main(String[] args) {
-		/*Esta é uma tentativa de criar um arquivo JSON*/
+		/*Esta é uma tentativa de criar um arquivo JSON
+		 * 
+		 * Lib: org.json
+		 * */
 		
 		//Cria Obj JSON
 		JSONObject pikachu = new JSONObject();
