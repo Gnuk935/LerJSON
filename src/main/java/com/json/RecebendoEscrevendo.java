@@ -11,19 +11,23 @@ public class RecebendoEscrevendo {
 
 		JSONObject pikachu = new JSONObject();
 		FileWriter escreve = null;
-		String nome;
+		String[] nome = new String[5];
 
 		try (Scanner s = new Scanner(System.in)) {
 
-			System.out.println("Informe seu nome:");
-			nome = s.next();
+			for (int i = 0; i < nome.length; i++) {
 
-			pikachu.put("Nome", nome);
+				System.out.println("Informe seu nome:");
+				nome[i] = s.next();
+
+				pikachu.put("Nome", nome[i]);
+			}
 
 			try {
 				escreve = new FileWriter("dado.json");
 
 				escreve.write(pikachu.toString());
+
 				escreve.close();
 			} catch (IOException e) {
 				e.printStackTrace();
